@@ -1,0 +1,44 @@
+server:
+  port: 8050
+  tomcat:
+    uri-encoding: UTF-8
+  servlet:
+    context-path: /
+
+spring:
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/flow?useUnicode=true&characterEncoding=utf8&useSSL=false&allowMultiQueries=true
+    username: root
+    password: 123456
+
+  # activiti相关配置
+  activiti:
+    check-process-definitions: false #自动检查、部署流程定义文件
+    database-schema-update: true #自动更新数据库结构
+    process-definition-location-prefix: classpath:/processes/bpmn/ #流程定义文件存放目录
+    #process-definition-location-suffixes: #流程文件格式
+    #  - **.bpmn20.xml
+    #  - **.bpmn
+    #保存历史数据级别设置为full最高级别，便于历史数据的追溯
+    history-level: full
+    async-executor-activate: false
+    #禁用activiti自带用户与用户组相关表（共计4张表，禁用后剩24张表）
+    db-identity-used: true
+    #禁用activiti历史表（共计8张表，禁用后剩下20张表）
+    #db-history-used: false
+    rest-api-enabled: true
+
+  #freemarker模板配置（activiti-modeler）
+  freemarker:
+    suffix: .ftl
+    cache: false
+    charset: UTF-8
+    contentType: text/html
+    requestContextAttribute: ctx
+    templateEncoding: UTF-8
+    templateLoaderPath: classpath:/templates/
+    settings:
+      defaultEncoding: UTF-8
+      url_escaping_charset: UTF-8
+      locale: zh_CN
+

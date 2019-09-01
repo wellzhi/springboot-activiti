@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: de.odysseus.juel:juel-spi:2.2.7">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/de/odysseus/juel/juel-spi/2.2.7/juel-spi-2.2.7.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/de/odysseus/juel/juel-spi/2.2.7/juel-spi-2.2.7-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/de/odysseus/juel/juel-spi/2.2.7/juel-spi-2.2.7-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

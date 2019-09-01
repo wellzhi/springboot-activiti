@@ -1,0 +1,16 @@
+package com.dapeng.flow.drool.drl;
+import com.dapeng.flow.drool.bean.Leave;
+
+rule "leave1"
+    when
+    	u : Leave(day < 3);
+    then
+    	u.setTotal(u.getDay() + 2);
+end
+
+rule "leave2"
+    when
+    	u : Leave(day >= 3);
+    then
+    	u.setTotal(u.getDay() + 5);
+end
